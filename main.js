@@ -31,3 +31,21 @@ function currentPlayer() {
 }
 
 window.onload = start;
+
+function game(btn) {
+    if (player === 1) {
+        currentPlayer();
+        document.getElementById(btn).value = "X";
+        document.getElementById(btn).disabled = "disabled";
+        winner();
+        currentPlayer();
+
+    } else if (player === 0) {
+        currentPlayer();
+        document.getElementById(btn).value = "O";
+        document.getElementById(btn).disabled = "disabled";
+        winner();
+        currentPlayer();
+    }
+
+}
