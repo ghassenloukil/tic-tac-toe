@@ -23,3 +23,16 @@ function start(){
 }
 
 setInterval(changeBackground, 7000);
+
+function choosePlayer() {
+    player = Math.floor(Math.random() * 2);
+}
+function currentPlayer() {
+    if (player === 1) {
+        document.getElementById("playerStatus").innerHTML = "Current player: X";
+    } else if (player === 0) {
+        document.getElementById("playerStatus").innerHTML = "Current player: O";
+    }
+}
+
+window.onload = start;
