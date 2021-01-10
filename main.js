@@ -38,6 +38,7 @@ function game(btn) {
         document.getElementById(btn).value = "X";
         document.getElementById(btn).disabled = "disabled";
         winner();
+         player -= 1;
         currentPlayer();
 
     } else if (player === 0) {
@@ -45,7 +46,9 @@ function game(btn) {
         document.getElementById(btn).value = "O";
         document.getElementById(btn).disabled = "disabled";
         winner();
+        player += 1;
         currentPlayer();
     }
 
 }
+
