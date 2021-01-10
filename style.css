@@ -1,11 +1,28 @@
 body {
-
+    background-image: url('https://data.whicdn.com/images/26738481/original.gif');
     margin: 0;
-    margin-left: 155px;
+    margin-left: 323px;
+    margin-top: 160px
+    }
+   #playerStatus{
+   	   color: yellow;
+       margin-left: 80px;
+       font-size: 30px	
+    }
+    #scoreX{
+    	color:yellow ;
+    	margin-left: 98px;
+    	font-size: 30px;
+    }
+    #scoreO{
+    	color:yellow;
+    	margin-left: 98px;
+    	font-size: 30px;
     }
     
     #body {
         background-color: rgba(117, 190, 218, 0.5) ;
+
     }
     
     #container {
