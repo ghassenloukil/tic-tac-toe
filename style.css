@@ -1,4 +1,21 @@
+body {
 
+    margin: 0;
+    margin-left: 155px;
+    }
+    
+    #body {
+        background-color: rgba(117, 190, 218, 0.5) ;
+    }
+    
+    #container {
+       width: 270px;
+       height: 270px;
+       
+       margin-left: 50px;
+       margin-top: 55px;
+       
+    }
     
    
     
