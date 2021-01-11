@@ -85,88 +85,139 @@ function check(){
 
     if((topLeft==='X')&&(topCenter==='X')&&(topRight==='X')){
         document.getElementById('turn').innerHTML = 'X WON!'
-            alert('you won ');
+            alert('congrats!X win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
-        if((middlLeft==='X')&&(middleCenter==='x')&&(middleRight==='X')){
+        if((middlLeft==='X')&&(middleCenter==='X')&&(middleRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('you won ');
+            alert('congrats!X win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((bottomLeft==='X')&&(bottomCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((topLeft==='X')&&(middlLeft==='X')&&(bottomLeft==='X')){
             document.getElementById('turn').innerHTML='X WON !'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if ((topCenter==='X')&&(middleCenter==='X')&&(bottomCenter==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((topRight==='X')&&(middleRight==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((topLeft==='X')&&(middleCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((bottomLeft==='X')&&(middleCenter==='X')&&(topRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('you won ');
+            alert('congrats!first player win');
+            scoreO ++
+            giveScoreX();
             addRestart();
+            disableButton();
         }
         if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
         document.getElementById('turn').innerHTML = 'O WON!'
-                alert('you won ');
+                alert('congrats!second player win');
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('you won ');
+            alert('congrats!second player win');
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('you won ');
+            alert('congrats!second player win');
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
             document.getElementById('turn').innerHTML='O WON !'
-            alert('you won ');
+            alert('congrats!second player win');
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('you won') ;
+            alert('congrats!second player win') ;
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('you won') ;
+            alert('congrats!second player win') ;
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('you won') ;
-            addRestart()
+            alert('congrats!second player win') ;
+            scoreO ++
+            giveScoreO();
+            addRestart();
+            disableButton();
         }
         if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('you won') ;
+            alert('congrats!second player win') ;
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
         }
         if (clickTimes===9){
             document.getElementById('turn').innerHTML='Game Over'
             alert('try again ');
+            scoreO ++
+            giveScoreO();
             addRestart();
+            disableButton();
 
         }
     }
@@ -194,6 +245,26 @@ function restart() {
 }
 function addRestart(){
     document.getElementById('button').innerHTML='<button onclick="'+'restart()'+'"id="'+'restart'+'">Restart!</button'
+}
+
+function giveScoreX(){
+    document.getElementById('scoreX').innerHTML='score X = '+scoreX+' '
+    if(scoreX ===5){
+        alert('your level is good X!');
+    }
+    else if(scoreX ===10){
+        alert ('your level is master X!');
+    }
+}
+
+function giveScoreO(){
+    document.getElementById('scoreO').innerHTML='score O = '+scoreO+' '
+    if (scoreO===5){
+        alert('your level is good O!');
+    }
+    else if(scoreO===10){
+        alert('your level is master O!')
+    }
 }
 
 
