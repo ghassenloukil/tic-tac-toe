@@ -53,7 +53,20 @@ body {
         
     }
 
-
+    #restart {
+        margin-left: 176px;
+       float:left ;
+       position: absolute;
+       top: 370px;
+       left: 115px;
+       width: 120px;
+       height: 60px;
+       border-radius: 20px;
+       border-color: black;
+       font-weight: bold;
+       
+       
+    }
     
    
     
