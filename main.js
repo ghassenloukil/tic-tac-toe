@@ -85,7 +85,7 @@ function check(){
 
     if((topLeft==='X')&&(topCenter==='X')&&(topRight==='X')){
         document.getElementById('turn').innerHTML = 'X WON!'
-            alert('congrats!X win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -93,7 +93,7 @@ function check(){
         }
         if((middlLeft==='X')&&(middleCenter==='X')&&(middleRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('congrats!X win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -101,7 +101,7 @@ function check(){
         }
         if((bottomLeft==='X')&&(bottomCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -109,7 +109,7 @@ function check(){
         }
         if((topLeft==='X')&&(middlLeft==='X')&&(bottomLeft==='X')){
             document.getElementById('turn').innerHTML='X WON !'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -117,7 +117,7 @@ function check(){
         }
         if ((topCenter==='X')&&(middleCenter==='X')&&(bottomCenter==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -125,7 +125,7 @@ function check(){
         }
         if((topRight==='X')&&(middleRight==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -133,7 +133,7 @@ function check(){
         }
         if((topLeft==='X')&&(middleCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
@@ -141,15 +141,15 @@ function check(){
         }
         if((bottomLeft==='X')&&(middleCenter==='X')&&(topRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            alert('congrats!first player win');
+            setTimeout(function(){ alert('congrats!first player win'); }, 1000);
             scoreO ++
             giveScoreX();
             addRestart();
             disableButton();
         }
         if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
-        document.getElementById('turn').innerHTML = 'O WON!'
-                alert('congrats!second player win');
+            document.getElementById('turn').innerHTML = 'O WON!'
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -157,7 +157,7 @@ function check(){
         }
         if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('congrats!second player win');
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -165,7 +165,7 @@ function check(){
         }
         if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('congrats!second player win');
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -173,7 +173,7 @@ function check(){
         }
         if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
             document.getElementById('turn').innerHTML='O WON !'
-            alert('congrats!second player win');
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -181,7 +181,7 @@ function check(){
         }
         if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            alert('congrats!second player win') ;
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -189,7 +189,7 @@ function check(){
         }
         if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('congrats!second player win') ;
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -197,7 +197,7 @@ function check(){
         }
         if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('congrats!second player win') ;
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
@@ -205,22 +205,17 @@ function check(){
         }
         if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            alert('congrats!second player win') ;
+            setTimeout(function(){ alert('congrats!second player win'); }, 1000);
             scoreO ++
             giveScoreO();
             addRestart();
             disableButton();
+        }else{
+            addRestart();
         }
-        if (clickTimes===9){
-            document.getElementById('turn').innerHTML='Game Over'
-            alert('try again ');
-            scoreO ++
-            giveScoreO();
-            addRestart();
-            disableButton();
+ }
 
-        }
-    }
+    
 
 function restart() {
     document.getElementById("btn1").value = "";
@@ -267,7 +262,17 @@ function giveScoreO(){
     }
 }
 
-
+function disablebutton(){
+    document.getElementById('btn1').disabled='disabled';
+    document.getElementById('btn2').disabled='disabled';
+    document.getElementById('btn3').disabled='disabled';
+    document.getElementById('btn4').disabled='disabled';
+    document.getElementById('btn5').disabled='disabled';
+    document.getElementById('btn6').disabled='disabled';
+    document.getElementById('btn7').disabled='disabled';
+    document.getElementById('btn8').disabled='disabled';
+    document.getElementById('btn9').disabled='disabled';
+}
 
 
 
