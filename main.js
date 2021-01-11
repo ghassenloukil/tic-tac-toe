@@ -105,4 +105,39 @@ function check(){
             document.getElementById('turn').innerHTML='X WON!'
             return ;
         }
+    if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
+        document.getElementById('turn').innerHTML = 'O WON!'
+                return ;
+        }
+        if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
+            document.getElementById('turn').innerHTML ='O WON!'
+            return ;
+        }
+        if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
+            document.getElementById('turn').innerHTML ='O WON!'
+            return ;
+        }
+        if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
+            document.getElementById('turn').innerHTML='O WON !'
+            return ;
+        }
+        if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
+            document.getElementById('turn').innerHTML ='O WON!'
+            return ;
+        }
+        if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
+            document.getElementById('turn').innerHTML='O WON!'
+            return ;
+        }
+        if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
+            document.getElementById('turn').innerHTML='O WON!'
+            return ;
+        }
+        if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
+            document.getElementById('turn').innerHTML='O WON!'
+            return ;
+        }
     }
+
+    
+
