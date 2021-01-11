@@ -18,25 +18,27 @@ function start(){
 }
 
 
-
+var boolean=true
 function choosePlayer() {
     player = Math.floor(Math.random() * 2);
 }
 function currentPlayer() {
     if (player === boolean) {
         document.getElementById("playerStatus").innerHTML = "Current player: X";
+        boolean==!boolean
       } else if (player === boolean) {
         document.getElementById("playerStatus").innerHTML = "Current player: O";
+        boolean===boolean
           }
 }
 
 window.onload = start;
-var boolean=true
+
 function game(btn) {
     if (player === 1) {
         currentPlayer();
         document.getElementById(btn).value = "X";
-         boolean==!boolean
+         
         document.getElementById(btn).disabled = "disabled";
         winner();
          player -= 1;
@@ -45,7 +47,7 @@ function game(btn) {
     } else if (player === 0) {
         currentPlayer();
         document.getElementById(btn).value = "O";
-        boolean===boolean
+        
         document.getElementById(btn).disabled = "disabled";
         winner();
         player += 1;
