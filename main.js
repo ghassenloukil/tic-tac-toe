@@ -5,6 +5,7 @@ var topLeft, middleLeft, bottomLeft;
 var topCenter, middleCenter, bottomCenter;
 var topRight, middleRight, bottomRight;
 var turn ;
+var clickTimes=0;
 var turn =document.getElementById('turn').innerHTML;
 if(turn == "X turn!")
     turn = false;
@@ -24,17 +25,18 @@ function start(){
 }
 
 
-
-
 function choosePlayer() {
     player = Math.floor(Math.random() * 2);
 }
+
 function currentPlayer() {
     if (player === 1) {
         document.getElementById("playerStatus").innerHTML = "Current player: X";
+        document.getElementById("turn").innerHTML="X turn !"
       
       } else if (player === 0) {
         document.getElementById("playerStatus").innerHTML = "Current player: O";
+        document.getElementById("turn").innerHTML="O turn !"
       
           }
 }
@@ -42,9 +44,9 @@ function currentPlayer() {
 
 window.onload = start;
 
+
 function game(btn) {
     if (player === 1) {
-        console.log('am here')
         currentPlayer();
         document.getElementById(btn).value = "X";
          
@@ -62,7 +64,7 @@ function game(btn) {
         player += 1;
         currentPlayer();
     }
-
+ 
 }
 
 function check(){
@@ -80,67 +82,67 @@ function check(){
 
     if((topLeft==='X')&&(topCenter==='X')&&(topRight==='X')){
         document.getElementById('turn').innerHTML = 'X WON!'
-                return ;
+                console.log('you won') ;
         }
         if((middlLeft==='X')&&(middleCenter==='x')&&(middleRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((bottomLeft==='X')&&(bottomCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topLeft==='X')&&(middlLeft==='X')&&(bottomLeft==='X')){
             document.getElementById('turn').innerHTML='X WON !'
-            return ;
+            console.log('you won') ;
         }
         if ((topCenter==='X')&&(middleCenter==='X')&&(bottomCenter==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topRight==='X')&&(middleRight==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topLeft==='X')&&(middleCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((bottomLeft==='X')&&(middleCenter==='X')&&(topRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
         document.getElementById('turn').innerHTML = 'O WON!'
-                return ;
+                console.log('you won') ;
         }
         if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            return ;
+            console.log('you won');
         }
         if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
             document.getElementById('turn').innerHTML='O WON !'
-            return ;
+            console.log('you won ');
         }
         if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            return ;
+            console.log('you won') ;
         }
         if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            return ;
+            console.log('you won') ;
         }
         if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            return ;
+            console.log('you won') ;
         }
     }
 

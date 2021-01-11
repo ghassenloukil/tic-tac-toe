@@ -19,6 +19,12 @@ body {
     	margin-left: 98px;
     	font-size: 30px;
     }
+    #turn{
+      background-color: #fff;
+      border :5px solid #E2E2E2;
+      width : 60px;
+      text-align: center;
+    }
     
     #body {
         background-color: rgba(117, 190, 218, 0.5) ;
