@@ -23,7 +23,10 @@ function start(){
     currentPlayer();
     alert1();
 }
-
+function click(){
+    game()
+    check()
+}
 
 function choosePlayer() {
     player = Math.floor(Math.random() * 2);
@@ -51,7 +54,7 @@ function game(btn) {
         document.getElementById(btn).value = "X";
          
         document.getElementById(btn).disabled = "disabled";
-       //winner();
+        check();
          player -= 1;
         currentPlayer();
 
@@ -60,7 +63,7 @@ function game(btn) {
         document.getElementById(btn).value = "O";
         
         document.getElementById(btn).disabled = "disabled";
-        //winner();
+        check();
         player += 1;
         currentPlayer();
     }
@@ -68,83 +71,132 @@ function game(btn) {
 }
 
 function check(){
-    topLeft=document.getElementById("btn1")
-    middlLeft=document.getElementById("btn2")
-    bottomLeft=document.getElementById("btn3")
+    topLeft=document.getElementById("btn1").value
+    middlLeft=document.getElementById("btn2").value
+    bottomLeft=document.getElementById("btn3").value
 
-    topCenter=document.getElementById("btn4")
-    middleCenter=document.getElementById("btn5")
-    bottomCenter=document.getElementById("btn6")
+    topCenter=document.getElementById("btn4").value
+    middleCenter=document.getElementById("btn5").value
+    bottomCenter=document.getElementById("btn6").value
 
-    topRight=document.getElementById("btn7")
-    middleRight=document.getElementById("btn8")
-    bottomRight=document.getElementById("btn9")
+    topRight=document.getElementById("btn7").value
+    middleRight=document.getElementById("btn8").value
+    bottomRight=document.getElementById("btn9").value
 
     if((topLeft==='X')&&(topCenter==='X')&&(topRight==='X')){
         document.getElementById('turn').innerHTML = 'X WON!'
-                console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((middlLeft==='X')&&(middleCenter==='x')&&(middleRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((bottomLeft==='X')&&(bottomCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((topLeft==='X')&&(middlLeft==='X')&&(bottomLeft==='X')){
             document.getElementById('turn').innerHTML='X WON !'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if ((topCenter==='X')&&(middleCenter==='X')&&(bottomCenter==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((topRight==='X')&&(middleRight==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((topLeft==='X')&&(middleCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((bottomLeft==='X')&&(middleCenter==='X')&&(topRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
         document.getElementById('turn').innerHTML = 'O WON!'
-                console.log('you won') ;
+                alert('you won ');
+            addRestart();
         }
         if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            console.log('you won');
+            alert('you won ');
+            addRestart();
         }
         if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            console.log('you won') ;
+            alert('you won ');
+            addRestart();
         }
         if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
             document.getElementById('turn').innerHTML='O WON !'
-            console.log('you won ');
+            alert('you won ');
+            addRestart();
         }
         if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
-            console.log('you won') ;
+            alert('you won') ;
+            addRestart();
         }
         if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            console.log('you won') ;
+            alert('you won') ;
+            addRestart();
         }
         if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            console.log('you won') ;
+            alert('you won') ;
+            addRestart()
         }
         if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
-            console.log('you won') ;
+            alert('you won') ;
+            addRestart();
+        }
+        if (clickTimes===9){
+            document.getElementById('turn').innerHTML='Game Over'
+            alert('try again ');
+            addRestart();
+
         }
     }
 
+function restart() {
+    document.getElementById("btn1").value = "";
+    document.getElementById("btn2").value = "";
+    document.getElementById("btn3").value = "";
+    document.getElementById("btn4").value = "";
+    document.getElementById("btn5").value = "";
+    document.getElementById("btn6").value = "";
+    document.getElementById("btn7").value = "";
+    document.getElementById("btn8").value = "";
+    document.getElementById("btn9").value = "";
+    document.getElementById("btn1").disabled = "";
+    document.getElementById("btn2").disabled = "";
+    document.getElementById("btn3").disabled = "";
+    document.getElementById("btn4").disabled = "";
+    document.getElementById("btn5").disabled = "";
+    document.getElementById("btn6").disabled = "";
+    document.getElementById("btn7").disabled = "";
+    document.getElementById("btn8").disabled = "";
+    document.getElementById("btn9").disabled = "";
     
+}
+function addRestart(){
+    document.getElementById('button').innerHTML='<button onclick="'+'restart()'+'"id="'+'restart'+'">Restart!</button'
+}
+
+
+
+
 

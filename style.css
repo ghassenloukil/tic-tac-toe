@@ -60,18 +60,23 @@ body {
     }
 
     #restart {
-        margin-left: 176px;
+       margin-left: 106px;
        float:left ;
        position: absolute;
-       top: 370px;
+       top: 330px;
        left: 115px;
        width: 120px;
        height: 60px;
        border-radius: 20px;
-       border-color: black;
+       border-color: red;
        font-weight: bold;
+       color:blue;
        
-       
+    }
+
+    #restart: active{
+    background-color: yellow;
+    transform: translateY(4px);
     }
     
    
