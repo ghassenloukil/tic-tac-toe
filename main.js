@@ -1,12 +1,15 @@
-var turn ;
 var scoreX = 0;
 var scoreO = 0;
 var player;
 var topLeft, middleLeft, bottomLeft;
 var topCenter, middleCenter, bottomCenter;
 var topRight, middleRight, bottomRight;
+var turn ;
 var turn =document.getElementById('turn').innerHTML;
-
+if(turn == "X turn!")
+    turn = false;
+if(turn == "O turn!")
+    turn = true;
 
 function alert1(){
    
@@ -19,6 +22,7 @@ function start(){
     currentPlayer();
     alert1();
 }
+
 
 
 
@@ -35,6 +39,7 @@ function currentPlayer() {
           }
 }
 
+
 window.onload = start;
 
 function game(btn) {
@@ -44,7 +49,7 @@ function game(btn) {
         document.getElementById(btn).value = "X";
          
         document.getElementById(btn).disabled = "disabled";
-        // winner();
+       //winner();
          player -= 1;
         currentPlayer();
 
@@ -53,7 +58,7 @@ function game(btn) {
         document.getElementById(btn).value = "O";
         
         document.getElementById(btn).disabled = "disabled";
-        // winner();
+        //winner();
         player += 1;
         currentPlayer();
     }
@@ -105,7 +110,7 @@ function check(){
             document.getElementById('turn').innerHTML='X WON!'
             return ;
         }
-    if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
+        if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
         document.getElementById('turn').innerHTML = 'O WON!'
                 return ;
         }
