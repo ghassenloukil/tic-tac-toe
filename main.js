@@ -217,27 +217,27 @@ function check(){
 
     
 
-function restart() {
-    document.getElementById("btn1").value = "";
-    document.getElementById("btn2").value = "";
-    document.getElementById("btn3").value = "";
-    document.getElementById("btn4").value = "";
-    document.getElementById("btn5").value = "";
-    document.getElementById("btn6").value = "";
-    document.getElementById("btn7").value = "";
-    document.getElementById("btn8").value = "";
-    document.getElementById("btn9").value = "";
-    document.getElementById("btn1").disabled = "";
-    document.getElementById("btn2").disabled = "";
-    document.getElementById("btn3").disabled = "";
-    document.getElementById("btn4").disabled = "";
-    document.getElementById("btn5").disabled = "";
-    document.getElementById("btn6").disabled = "";
-    document.getElementById("btn7").disabled = "";
-    document.getElementById("btn8").disabled = "";
-    document.getElementById("btn9").disabled = "";
+// function restart() {
+//     document.getElementById("btn1").value = "";
+//     document.getElementById("btn2").value = "";
+//     document.getElementById("btn3").value = "";
+//     document.getElementById("btn4").value = "";
+//     document.getElementById("btn5").value = "";
+//     document.getElementById("btn6").value = "";
+//     document.getElementById("btn7").value = "";
+//     document.getElementById("btn8").value = "";
+//     document.getElementById("btn9").value = "";
+//     document.getElementById("btn1").disabled = "";
+//     document.getElementById("btn2").disabled = "";
+//     document.getElementById("btn3").disabled = "";
+//     document.getElementById("btn4").disabled = "";
+//     document.getElementById("btn5").disabled = "";
+//     document.getElementById("btn6").disabled = "";
+//     document.getElementById("btn7").disabled = "";
+//     document.getElementById("btn8").disabled = "";
+//     document.getElementById("btn9").disabled = "";
     
-}
+// }
 function addRestart(){
     document.getElementById('button').innerHTML='<button onclick="'+'restart()'+'"id="'+'restart'+'">Restart!</button'
 }
@@ -262,17 +262,17 @@ function giveScoreO(){
     }
 }
 
-function disablebutton(){
-    document.getElementById('btn1').disabled='disabled';
-    document.getElementById('btn2').disabled='disabled';
-    document.getElementById('btn3').disabled='disabled';
-    document.getElementById('btn4').disabled='disabled';
-    document.getElementById('btn5').disabled='disabled';
-    document.getElementById('btn6').disabled='disabled';
-    document.getElementById('btn7').disabled='disabled';
-    document.getElementById('btn8').disabled='disabled';
-    document.getElementById('btn9').disabled='disabled';
-}
+// function disablebutton(){
+//     document.getElementById('btn1').disabled='disabled';
+//     document.getElementById('btn2').disabled='disabled';
+//     document.getElementById('btn3').disabled='disabled';
+//     document.getElementById('btn4').disabled='disabled';
+//     document.getElementById('btn5').disabled='disabled';
+//     document.getElementById('btn6').disabled='disabled';
+//     document.getElementById('btn7').disabled='disabled';
+//     document.getElementById('btn8').disabled='disabled';
+//     document.getElementById('btn9').disabled='disabled';
+// }
 
 
 
