@@ -60,7 +60,7 @@ body {
     }
 
     #restart {
-       margin-left: 106px;
+        margin-left: 106px;
        float:left ;
        position: absolute;
        top: 330px;
@@ -68,15 +68,10 @@ body {
        width: 120px;
        height: 60px;
        border-radius: 20px;
-       border-color: red;
+       border-color: black;
        font-weight: bold;
-       color:blue;
        
-    }
-
-    #restart: active{
-    background-color: yellow;
-    transform: translateY(4px);
+       
     }
     
    

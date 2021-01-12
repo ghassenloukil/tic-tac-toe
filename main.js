@@ -23,10 +23,11 @@ function start(){
     currentPlayer();
     alert1();
 }
+
 function click(){
-    game()
-    check()
-}
+game()
+check()}
+
 
 function choosePlayer() {
     player = Math.floor(Math.random() * 2);
@@ -48,13 +49,14 @@ function currentPlayer() {
 window.onload = start;
 
 
+
 function game(btn) {
     if (player === 1) {
         currentPlayer();
         document.getElementById(btn).value = "X";
          
         document.getElementById(btn).disabled = "disabled";
-        check();
+       check();
          player -= 1;
         currentPlayer();
 
@@ -86,158 +88,143 @@ function check(){
     if((topLeft==='X')&&(topCenter==='X')&&(topRight==='X')){
         document.getElementById('turn').innerHTML = 'X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
+
         }
-        if((middlLeft==='X')&&(middleCenter==='X')&&(middleRight==='X')){
+        if((middlLeft==='X')&&(middleCenter==='x')&&(middleRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((bottomLeft==='X')&&(bottomCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((topLeft==='X')&&(middlLeft==='X')&&(bottomLeft==='X')){
             document.getElementById('turn').innerHTML='X WON !'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if ((topCenter==='X')&&(middleCenter==='X')&&(bottomCenter==='X')){
             document.getElementById('turn').innerHTML ='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((topRight==='X')&&(middleRight==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((topLeft==='X')&&(middleCenter==='X')&&(bottomRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+             scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((bottomLeft==='X')&&(middleCenter==='X')&&(topRight==='X')){
             document.getElementById('turn').innerHTML='X WON!'
             setTimeout(function(){ alert('congrats!first player win'); }, 1000);
-            scoreO ++
+            scoreX++;
             giveScoreX();
             addRestart();
-            disableButton();
         }
         if((topLeft==='O')&&(topCenter==='O')&&(topRight==='O')){
-            document.getElementById('turn').innerHTML = 'O WON!'
+        document.getElementById('turn').innerHTML = 'O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
         }
         if((middlLeft==='O')&&(middleCenter==='O')&&(middleRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
         }
         if((bottomLeft==='O')&&(bottomCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
         }
         if((topLeft==='O')&&(middlLeft==='O')&&(bottomLeft==='O')){
             document.getElementById('turn').innerHTML='O WON !'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
         }
         if ((topCenter==='O')&&(middleCenter==='O')&&(bottomCenter==='O')){
             document.getElementById('turn').innerHTML ='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
         }
         if((topRight==='O')&&(middleRight==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
+        
         }
         if((topLeft==='O')&&(middleCenter==='O')&&(bottomRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+              scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
+
         }
         if((bottomLeft==='O')&&(middleCenter==='O')&&(topRight==='O')){
             document.getElementById('turn').innerHTML='O WON!'
             setTimeout(function(){ alert('congrats!second player win'); }, 1000);
-            scoreO ++
+            scoreO++;
             giveScoreO();
             addRestart();
-            disableButton();
-        }else{
-            addRestart();
+
         }
- }
+    }
 
     
-
-// function restart() {
-//     document.getElementById("btn1").value = "";
-//     document.getElementById("btn2").value = "";
-//     document.getElementById("btn3").value = "";
-//     document.getElementById("btn4").value = "";
-//     document.getElementById("btn5").value = "";
-//     document.getElementById("btn6").value = "";
-//     document.getElementById("btn7").value = "";
-//     document.getElementById("btn8").value = "";
-//     document.getElementById("btn9").value = "";
-//     document.getElementById("btn1").disabled = "";
-//     document.getElementById("btn2").disabled = "";
-//     document.getElementById("btn3").disabled = "";
-//     document.getElementById("btn4").disabled = "";
-//     document.getElementById("btn5").disabled = "";
-//     document.getElementById("btn6").disabled = "";
-//     document.getElementById("btn7").disabled = "";
-//     document.getElementById("btn8").disabled = "";
-//     document.getElementById("btn9").disabled = "";
+function restart() {
+    document.getElementById("btn1").value = "";
+    document.getElementById("btn2").value = "";
+    document.getElementById("btn3").value = "";
+    document.getElementById("btn4").value = "";
+    document.getElementById("btn5").value = "";
+    document.getElementById("btn6").value = "";
+    document.getElementById("btn7").value = "";
+    document.getElementById("btn8").value = "";
+    document.getElementById("btn9").value = "";
+    document.getElementById("btn1").disabled = "";
+    document.getElementById("btn2").disabled = "";
+    document.getElementById("btn3").disabled = "";
+    document.getElementById("btn4").disabled = "";
+    document.getElementById("btn5").disabled = "";
+    document.getElementById("btn6").disabled = "";
+    document.getElementById("btn7").disabled = "";
+    document.getElementById("btn8").disabled = "";
+    document.getElementById("btn9").disabled = "";
     
-// }
+}
 function addRestart(){
     document.getElementById('button').innerHTML='<button onclick="'+'restart()'+'"id="'+'restart'+'">Restart!</button'
 }
@@ -262,17 +249,8 @@ function giveScoreO(){
     }
 }
 
-// function disablebutton(){
-//     document.getElementById('btn1').disabled='disabled';
-//     document.getElementById('btn2').disabled='disabled';
-//     document.getElementById('btn3').disabled='disabled';
-//     document.getElementById('btn4').disabled='disabled';
-//     document.getElementById('btn5').disabled='disabled';
-//     document.getElementById('btn6').disabled='disabled';
-//     document.getElementById('btn7').disabled='disabled';
-//     document.getElementById('btn8').disabled='disabled';
-//     document.getElementById('btn9').disabled='disabled';
-// }
+
+
 
 
 
